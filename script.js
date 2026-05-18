@@ -117,31 +117,60 @@ console.log("Welcome to JS!");
 
 
 
-CreateUser.prototype.about = function () {
-    return `${this.firstName} is ${this.age} years old.`;
-  };
+// CreateUser.prototype.about = function () {
+//     return `${this.firstName} is ${this.age} years old.`;
+//   };
 
-  CreateUser.prototype.is18 = function () {
-    return this.age >= 18;
-  }
+//   CreateUser.prototype.is18 = function () {
+//     return this.age >= 18;
+//   }
 
-function CreateUser(_firstName, _lastName, _email, _age, _address) {
-  this.firstName = _firstName;
-  this.lastName = _lastName;
-  this.email = _email;
-  this.age = _age;
-  this.address = _address;
+// function CreateUser(_firstName, _lastName, _email, _age, _address) {
+//   this.firstName = _firstName;
+//   this.lastName = _lastName;
+//   this.email = _email;
+//   this.age = _age;
+//   this.address = _address;
+// }
+
+// const user1 = new CreateUser(
+//   "Shuaib",
+//   "Khan",
+//   "skhan.csit@gmail.com",
+//   "26",
+//   "KP, Pakistan",
+// );
+
+// console.log(user1.about());
+// console.log(user1.is18());
+// // console.log(user1.__proto__);
+// // console.log(Object.getPrototypeOf(user1));
+
+// Arrray.prototype.about = function(){
+//   return "HELO ABOUT"
+// }
+// function Arrray(){
+//   this.name = "Shuaib"
+// }
+ 
+// const arr = new Arrray();
+
+// console.log(arr);
+
+// const arr = new Array();
+// console.log(arr);
+
+
+class Animal{
+    constructor(_name, _food){
+        this.name = _name;
+        this.food = _food;
+    }
+    eat(){
+        console.log(`${this.name} eats ${this.food}.`);
+    }
 }
 
-const user1 = new CreateUser(
-  "Shuaib",
-  "Khan",
-  "skhan.csit@gmail.com",
-  "26",
-  "KP, Pakistan",
-);
+const dog = new Animal("Dog", "Meat");
+console.log(dog);
 
-console.log(user1.about());
-console.log(user1.is18());
-// console.log(user1.__proto__);
-// console.log(Object.getPrototypeOf(user1));
