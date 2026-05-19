@@ -171,6 +171,14 @@ class Animal{
     }
 }
 
-const dog = new Animal("Dog", "Meat");
-console.log(dog);
+class Cat extends Animal{
+    constructor(_name,  _food, _age){
+        super(_name, _food);
+        this.age = _age;
+    }
+}
+
+const cat1 = new Cat("Catii", "Meat", 12);
+console.log(cat1);
+
 
